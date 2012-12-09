@@ -46,7 +46,11 @@ everyone.now.performEffect = function(img,effect){
      blur(img);
   } else if(effect == 'draw'){
      draw(img);
-  }
+  } else if(effect == 'rotate'){
+     rotate(img);
+  } else if(effect == 'resize'){
+     resize(img);
+  } 
 };
 
 function blur(img){
@@ -81,6 +85,27 @@ function draw(img){
       console.log(this.outname + ' created  :: ' + arguments[3])
       everyone.now.receiveOutput("msg", "drawing.jpg");
     }) 
+}
+
+function rotate(img){
+  
+  gm(dir + '/'+img)
+  .rotate('red', -30)
+  .write(dir + '/rotate.jpg', function(err){
+    if (err) return console.dir(arguments)
+    console.log(this.outname + " created  ::  " + arguments[3])
+    everyone.now.receiveOutput("msg", "rotate.jpg");
+  }) 
+}
+
+function resize(img){
+  
+  gm(dir + '/'+img)
+  .thumb(50, 50, dir + '/thumb.jpg', function(err){
+    if (err) return console.dir(arguments)
+    console.log(this.outname + " created  ::  " + arguments[3])
+    everyone.now.receiveOutput("msg", "thumb.jpg");
+  }) 
 }
 //  everyone.now.receiveOutput("msg", "\n ---- waiting for compiler  ----");
 
