@@ -1,0 +1,194 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install', 'opencv' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /home/ubuntu/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/gm/package.json
+verbose cache add [ 'opencv', null ]
+silly cache add: name, spec, args [ undefined, 'opencv', [ 'opencv', null ] ]
+verbose parsed url { pathname: 'opencv', path: 'opencv', href: 'opencv' }
+verbose addNamed [ 'opencv', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'opencv', '', false ]
+verbose raw, before any munging opencv
+verbose url resolving [ 'https://registry.npmjs.org/', './opencv' ]
+verbose url resolved https://registry.npmjs.org/opencv
+verbose etag "2VG7SBI61K3X2HMJ8CELLRRZG"
+http GET https://registry.npmjs.org/opencv
+http 304 https://registry.npmjs.org/opencv
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"2VG7SBI61K3X2HMJ8CELLRRZG"',
+silly get cb     date: 'Thu, 06 Dec 2012 07:27:25 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag opencv from cache
+silly name, range, hasData 2 [ 'opencv', '', true ]
+silly versions [ 'opencv',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.3',
+silly versions     '0.0.4',
+silly versions     '0.0.5',
+silly versions     '0.0.6',
+silly versions     '0.0.7',
+silly versions     '0.0.8',
+silly versions     '0.0.9' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-ia32-3.2.0-34-generic-pae',
+verbose bin dist   { shasum: '1f93ff74c47f1d34c7d4ed4b99abcbaa30330d31',
+verbose bin dist     tarball: 'http://registry.npmjs.org/opencv/-/opencv-0.0.9.tgz' } ]
+verbose caching /home/ubuntu/.npm/opencv/0.0.9/package/package.json
+verbose loadDefaults opencv@0.0.9
+silly resolved [ { name: 'opencv',
+silly resolved     description: 'Node Bindings to OpenCV',
+silly resolved     author: { name: 'Peter Braden', email: 'peterbraden@peterbraden.co.uk' },
+silly resolved     dependencies: { buffers: '0.1.1' },
+silly resolved     version: '0.0.9',
+silly resolved     devDependencies: { vows: '*' },
+silly resolved     engine: 'node >= 0.4.1',
+silly resolved     scripts: 
+silly resolved      { preinstall: 'node-gyp clean rebuild',
+silly resolved        test: 'vows test/unit.js' },
+silly resolved     main: './lib/opencv',
+silly resolved     _id: 'opencv@0.0.9',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.12',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'opencv' } ]
+info into /home/ubuntu/work/imagemanip/ImageManipulationWithNode opencv@0.0.9
+info installOne opencv@0.0.9
+verbose from cache /home/ubuntu/.npm/opencv/0.0.9/package/package.json
+info unbuild /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm'
+verbose mkdir done: /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/index.html
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/MIT-LICENSE.txt
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.binding.gyp.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.package.json.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/README.md
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.npmignore
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/binding.gyp
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.travis.yml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/package.json
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.temp.js.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/build.sh
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.README.md.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/todo
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/.temp.coffee.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/over_text.png
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/contours.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/mona.png
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/stuff.png
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/salt.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/face-proxy.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/addweighted.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/camera.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/convert_image.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/Face.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/examples/face_detection.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/smoke
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/smoke/smoke.sh
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/smoke/smoketest.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/smoke/.smoketest.js.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/lib
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/lib/opencv.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/lib/bindings.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/test
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/test/.unit.js.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/test/.temp.js.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/test/unit.js
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/Contours.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/Contours.h
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/.CamShift.cc.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/.Matrix.cc.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/.CamShift.h.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/Matrix.h
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/VideoCaptureWrap.h
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/.init.cc.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/Matrix.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/init.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/Point.h
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/Point.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/CascadeClassifierWrap.h
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/VideoCaptureWrap.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/OpenCV.h
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/OpenCV.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/CascadeClassifierWrap.cc
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/src/.Matrix.h.un~
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_nose.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_mouth.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_profileface.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_eyepair_big.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_frontalface_default.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_upperbody.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_lefteye.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_frontalface_alt.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_frontalface_alt2.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_eye_tree_eyeglasses.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_frontalface_alt_tree.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_righteye_2splits.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_lowerbody.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_lefteye_2splits.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_upperbody.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_fullbody.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_righteye.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_mcs_eyepair_small.xml
+silly asyncMap in gTP /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package/data/haarcascade_eye.xml
+silly chmod package 755
+verbose gunzed /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package
+verbose rm'ed /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv
+verbose renamed [ '/home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/___opencv.npm/package',
+verbose renamed   '/home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv' ]
+verbose caching /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv/package.json
+verbose loadDefaults opencv@0.0.9
+info preinstall opencv@0.0.9
+verbose unsafe-perm in lifecycle true
+silly exec sh "-c" "node-gyp clean rebuild"
+silly spawning [ 'sh',
+silly spawning   [ '-c', 'node-gyp clean rebuild' ],
+silly spawning   '/home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv' ]
+info opencv@0.0.9 Failed to exec preinstall script
+ERR! error installing opencv@0.0.9
+info unbuild /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv
+verbose from cache /home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules/opencv/package.json
+info preuninstall opencv@0.0.9
+info uninstall opencv@0.0.9
+verbose unbuild opencv@0.0.9 [ true,
+verbose unbuild opencv@0.0.9   '/home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules',
+verbose unbuild opencv@0.0.9   '/home/ubuntu/work/imagemanip/ImageManipulationWithNode/node_modules' ]
+info postuninstall opencv@0.0.9
+verbose installOne cb opencv@0.0.9
+ERR! opencv@0.0.9 preinstall: `node-gyp clean rebuild`
+ERR! `sh "-c" "node-gyp clean rebuild"` failed with 1
+ERR! 
+ERR! Failed at the opencv@0.0.9 preinstall script.
+ERR! This is most likely a problem with the opencv package,
+ERR! not with npm itself.
+ERR! Tell the author that this fails on your system:
+ERR!     node-gyp clean rebuild
+ERR! You can get their info via:
+ERR!     npm owner ls opencv
+ERR! There is likely additional logging output above.
+ERR! 
+ERR! System Linux 3.2.0-34-generic-pae
+ERR! command "node" "/usr/bin/npm" "install" "opencv"
+ERR! cwd /home/ubuntu/work/imagemanip/ImageManipulationWithNode
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! code ELIFECYCLE
+ERR! message opencv@0.0.9 preinstall: `node-gyp clean rebuild`
+ERR! message `sh "-c" "node-gyp clean rebuild"` failed with 1
+ERR! errno {}
+verbose exit [ 1, true ]

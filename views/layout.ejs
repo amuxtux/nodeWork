@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Node Image processor</title>
+
+    <script src="/nowjs/now.js"></script>
+    <script type="text/javascript">
+   
+     var selectedImage = "";
+     
+     
+     function performEffect(effect,image){
+       //var codeArea = document.getElementById("code");
+       //var logArea = document.getElementById("output");
+       //alert("executing .."+codeArea.value);
+       //logArea.value = "waiting for compiler......";
+       //now.compileCode(codeArea.value); 
+     }
+    
+    function selectImage(image){
+      alert(image);
+      //var filename = document.getElementById("filename").value;
+      //var code = document.getElementById("code").value;
+      //now.saveCode(filename,code);
+    }
+
+    function selectEffect(effect){
+      //var filename = document.getElementById("filename").value;
+      //var code = document.getElementById("code");
+      //code.value = now.loadCode(filename);
+    }
+
+     now.receiveOutput = function(name, data){
+       if(name != "msg")
+          return;
+       console.log(message);
+            
+       var logArea = document.getElementById("output");
+       logArea.value = logArea.value + " \n  "+ message;
+
+      }
+     </script>
+  </head>
+  <body>
+<%- body %>
+  </body>
+</html>

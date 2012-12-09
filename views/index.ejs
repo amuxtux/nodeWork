@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Node Image processor</title>
+
+    <script src="http://localhost:3000/nowjs/now.js"></script>
+    <script type="text/javascript">
+   
+     var selectedImage = "";
+     var selectedEffect = "";
+     
+     function performEffect(effect,image){
+       now.performEffect(effect,image); 
+     }
+    
+    function selectImage(image){
+      //alert(image);
+      selectedImage = image;
+      document.getElementById("original").src = image;
+      //now.saveCode(filename,code);
+    }
+
+    function selectEffect(effect){
+      //alert(effect);
+      selectedEffect = effect;
+      performEffect(selectedImage,selectedEffect);
+    }
+
+     now.receiveOutput = function(name, processedImage){
+       if(name != "msg")
+          return;
+       document.getElementById("processed").src = processedImage; 
+       //console.log(message);     
+       //var logArea = document.getElementById("output");
+       //logArea.value = logArea.value + " \n  "+ message;
+     }
+     </script>
+  </head>
+  <body>
+<div style="background-color:gray" align="middle">
+
+<table border="1px">
+ <tr>
+  <td> <font color="white">  Original Image  </font> </td>
+  <td> <font color="white">  Processed Image  </font> </td>
+ </tr>	  
+ <tr>
+  <td> <img src="galaxy.jpg" alt="original" id="original" width="200px" height="200px" /> </td>
+  <td>  <img src="galaxy.jpg" alt="processed" id="processed" width="200px" height="200px" /> </td>
+ </tr>
+</table>
+</div>
+
+<br>
+<hr>
+<br>
+ 
+ <div style="background-color:gray" align="middle">
+ <font color="white">please choose an image </font>
+<br>
+ <table border="1px">
+  
+  <tr>
+   <td> <input type="image" src="original.jpg" alt="first" id="original.jpg" width="100px" height="100px" onclick="selectImage(this.id)"/> </td>
+   <td> <img src="galaxy.jpg" alt="second" id="galaxy.jpg" width="100px" height="100px" onclick='selectImage(this.id)'/> </td>
+   <td> <img src="ball.jpg" alt="third" id="ball.jpg" width="100px" height="100px" onclick='selectImage(this.id)'/> </td>
+   <td> <img src="priyanka.jpg" alt="forth" id="priyanka.jpg" width="100px" height="100px" onclick='selectImage(this.id)'/> </td>
+  </tr>
+ </table>
+<br>
+ </div>
+       <hr>
+<br>
+<hr>
+<br>
+ 
+ <div style="background-color:gray" align="middle">
+ <font color="white">please choose an effect to perform </font>
+<br>
+ <table border="1px">
+  <tr>
+   <td> <input type="button" id="resize" value="resize" onclick="selectEffect(this.id)"/> </td>
+   <td> <input type="button" id="blur" value="blur" onclick="selectEffect(this.id)"/> </td>
+   <td> <input type="button" id="draw" value="draw" onclick="selectEffect(this.id)"/> </td>
+   <td> <input type="button" id="blur" value="blur" onclick="selectEffect(this.id)"/> </td>
+  </tr>
+ </table>
+<br>
+ </div>
+     <hr>
+     <input type="button" value="Compile & Execute" id="run" onclick='runCode()' />
+     <input type="text" value="mycode.rs" id="filename" />
+        <input type="button" value="SaveMyCode" id="saveCpde" onclick='saveCode()' />
+        <input type="button" value="loadFile" id="loadCode" onclick='loadCode()' />
+    <br>
+       <textarea rows="10" cols="80" id="output">
+      </textarea>
+
+  </body>
