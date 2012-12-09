@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'opencv' ]
+2 info using npm@1.1.65
+3 info using node@v0.8.14
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ 'opencv', null ]
+7 silly cache add name=undefined spec="opencv" args=["opencv",null]
+8 verbose parsed url { pathname: 'opencv', path: 'opencv', href: 'opencv' }
+9 silly lockFile 34897cde-opencv opencv
+10 verbose lock opencv /Users/amit/.npm/34897cde-opencv.lock
+11 silly lockFile 34897cde-opencv opencv
+12 verbose addNamed [ 'opencv', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile 4da5a9ce-opencv opencv@
+15 verbose lock opencv@ /Users/amit/.npm/4da5a9ce-opencv.lock
+16 silly addNameRange { name: 'opencv', range: '', hasData: false }
+17 verbose url raw opencv
+18 verbose url resolving [ 'https://registry.npmjs.org/', './opencv' ]
+19 verbose url resolved https://registry.npmjs.org/opencv
+20 info trying registry request attempt 1 at 22:16:04
+21 verbose etag "2VG7SBI61K3X2HMJ8CELLRRZG"
+22 http GET https://registry.npmjs.org/opencv
+23 http 304 https://registry.npmjs.org/opencv
+24 silly registry.get cb [ 304,
+24 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+24 silly registry.get     etag: '"2VG7SBI61K3X2HMJ8CELLRRZG"',
+24 silly registry.get     date: 'Sun, 09 Dec 2012 13:15:17 GMT',
+24 silly registry.get     'content-length': '0' } ]
+25 verbose etag opencv from cache
+26 silly addNameRange number 2 { name: 'opencv', range: '', hasData: true }
+27 silly addNameRange versions [ 'opencv',
+27 silly addNameRange   [ '0.0.1',
+27 silly addNameRange     '0.0.2',
+27 silly addNameRange     '0.0.3',
+27 silly addNameRange     '0.0.4',
+27 silly addNameRange     '0.0.5',
+27 silly addNameRange     '0.0.6',
+27 silly addNameRange     '0.0.7',
+27 silly addNameRange     '0.0.8',
+27 silly addNameRange     '0.0.9' ] ]
+28 verbose addNamed [ 'opencv', '0.0.9' ]
+29 verbose addNamed [ '0.0.9', '0.0.9' ]
+30 silly lockFile 410a70e4-opencv-0-0-9 opencv@0.0.9
+31 verbose lock opencv@0.0.9 /Users/amit/.npm/410a70e4-opencv-0-0-9.lock
+32 verbose read json /Users/amit/.npm/opencv/0.0.9/package/package.json
+33 silly lockFile 410a70e4-opencv-0-0-9 opencv@0.0.9
+34 silly lockFile 4da5a9ce-opencv opencv@
+35 silly resolved [ { name: 'opencv',
+35 silly resolved     description: 'Node Bindings to OpenCV',
+35 silly resolved     author: { name: 'Peter Braden', email: 'peterbraden@peterbraden.co.uk' },
+35 silly resolved     dependencies: { buffers: '0.1.1' },
+35 silly resolved     version: '0.0.9',
+35 silly resolved     devDependencies: { vows: '*' },
+35 silly resolved     engine: 'node >= 0.4.1',
+35 silly resolved     scripts:
+35 silly resolved      { preinstall: 'node-gyp clean rebuild',
+35 silly resolved        test: 'vows test/unit.js' },
+35 silly resolved     main: './lib/opencv',
+35 silly resolved     readme: '# node-opencv \n\n[![Build Status](https://secure.travis-ci.org/peterbraden/node-opencv.png)](http://travis-ci.org/peterbraden/node-opencv)\n\n\n[OpenCV](http://opencv.willowgarage.com/wiki/) bindings for Node.js. OpenCV is the defacto computer vision library - by interfacing with it natively in node, we get powerful real time vision in js.\n\nPeople are using node-opencv to fly control quadrocoptors, detect faces from webcam images and annotate video streams. If you\'re using it for something cool, I\'d love to hear about it!\n\n## Install\n\nYou\'ll need OpenCV 2.3.1 installed.\n\nThen:\n\n\n        npm install opencv\n\n\nOr to build the repo:\n\n\n        node-gyp rebuild\n\n\n## Examples\n\n### Face Detection\n\n\n        cv.readImage("./examples/test.jpg", function(err, im){\n          im.detectObject("./data/haarcascade_frontalface_alt.xml", {}, function(err, faces){\n            for (var i=0;i<faces.length; i++){\n              var x = faces[i]\n              im.ellipse(x.x + x.width/2, x.y + x.height/2, x.width/2, x.height/2);\n            }\n            im.save(\'./out.jpg\');\n          });\n        })\n\n\n\n## API Documentation\n\n### Matrix\n\nThe [matrix](http://opencv.jp/opencv-2svn_org/cpp/core_basic_structures.html#mat) is the most useful\nbase datastructure in OpenCV. Things like images are just matrices of pixels.\n\n#### Creation\n\n        new Matrix(width, height)\n\nOr you can use opencv to read in image files. Supported formats are in the OpenCV docs, but jpgs etc are supported.\n\n        cv.readImage(filename, function(mat){\n          ...\n        })\n\n        cv.readImage(buffer, function(mat){\n          ...\n        })\n\nIf you need to pipe data into an image, you can use an imagestream:\n\n        var s = new cv.ImageStream()\n\n        s.on(\'load\', function(matrix){ \n          ...\n        }) \n\n        fs.createReadStream(\'./examples/test.jpg\').pipe(s);        \n\n#### Accessing Data\n\n        var mat = new cv.Matrix.Eye(4,4); // Create identity matrix\n\n        mat.get(0,0) // 1\n\n        mat.row(0)  // [1,0,0,0]\n        mat.col(4)  // [0,0,0,1]\n\n\n##### Save\n\n        mat.save(\'./pic.jpg\')\n\nor:\n\n        var buff = mat.toBuffer()\n\n\n#### Image Processing\n\n        im.convertGrayscale()\n        im.canny(5, 300)\n        im.houghLinesP()\n\n\n\n#### Simple Drawing\n\n        im.ellipse(x, y)\n        im.line([x1,y1], [x2, y2])\n\n\n#### Object Detection\n\nThere is a shortcut method for \n[Viola-Jones Haar Cascade](http://www.cognotics.com/opencv/servo_2007_series/part_2/sidebar.html) object \ndetection. This can be used for face detection etc.\n\n\n        mat.detectObject(haar_cascade_xml, opts, function(err, matches){})\n\n\nAlso:\n\n        mat.goodFeaturesToTrack\n\n\n#### Contours\n\n        mat.findCountours\n        mat.drawContour\n        mat.drawAllContours\n\n\n## MIT License\nThe library is distributed under the MIT License - if for some reason that \ndoesn\'t work for you please get in touch.\n\n## Changelog\n\n\n#### 0.0.9\n\n- toBuffer can now take a callback and be run async (re #21)\n',
+35 silly resolved     readmeFilename: 'README.md',
+35 silly resolved     _id: 'opencv@0.0.9',
+35 silly resolved     _from: 'opencv' } ]
+36 info install opencv@0.0.9 into /usr/local/lib
+37 info installOne opencv@0.0.9
+38 verbose from cache /Users/amit/.npm/opencv/0.0.9/package/package.json
+39 info /usr/local/lib/node_modules/opencv unbuild
+40 verbose read json /usr/local/lib/node_modules/opencv/package.json
+41 info preuninstall opencv@0.0.9
+42 info uninstall opencv@0.0.9
+43 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild opencv@0.0.9
+44 info postuninstall opencv@0.0.9
+45 info /usr/local/lib/node_modules/opencv unbuild
+46 verbose read json /usr/local/lib/node_modules/opencv/package.json
+47 info preuninstall opencv@0.0.9
+48 info uninstall opencv@0.0.9
+49 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild opencv@0.0.9
+50 info postuninstall opencv@0.0.9
+51 error error rolling back Error: EPERM, chmod '/usr/local/lib/node_modules/opencv'
+51 error error rolling back  opencv@0.0.9 { [Error: EPERM, chmod '/usr/local/lib/node_modules/opencv']
+51 error error rolling back   errno: 50,
+51 error error rolling back   code: 'EPERM',
+51 error error rolling back   path: '/usr/local/lib/node_modules/opencv' }
+52 error Error: EPERM, chmod '/usr/local/lib/node_modules/opencv'
+52 error  { [Error: EPERM, chmod '/usr/local/lib/node_modules/opencv']
+52 error   errno: 50,
+52 error   code: 'EPERM',
+52 error   path: '/usr/local/lib/node_modules/opencv' }
+53 error Please try running this command again as root/Administrator.
+54 error System Darwin 12.2.1
+55 error command "node" "/usr/local/bin/npm" "install" "opencv"
+56 error cwd /Users/amit/work/nodejs/nodeWorkGit/nodeWork
+57 error node -v v0.8.14
+58 error npm -v 1.1.65
+59 error path /usr/local/lib/node_modules/opencv
+60 error code EPERM
+61 error errno 50
+62 error stack Error: EPERM, chmod '/usr/local/lib/node_modules/opencv'
+63 verbose exit [ 50, true ]
